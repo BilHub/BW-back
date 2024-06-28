@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Abonnement :</h1>
+    <div>
+            {% if subs.subscription != '' %}
+                <p><b>Abonnement : </b> {{ subs.subscription }} </p>
+                <p><b>Date de souscription : </b> {{ subs.start_at }} </p>
+                <p><b>Date d'expiration : </b> {{ subs.expire_on }} </p>
+                <p><b>Etat : </b> {{ status[subs.subs_status] }} </p>
+                <p><b>Nombre d'utilisateur/Crédits : </b> {{ subs.nb_users }}/{{ subs.user_credits }}</p>
+                <p><b>Nombre d'actifs : </b> {{ subs.nb_assets }}</p>
+                <p><b>Nombre de produits/Crédits : </b> {{ subs.nb_products }}/{{ subs.cpe_credits }}</p>
+            {% else %}
+                <p><b>Abonnement : </b> Pas encore souscrit à un abonnement! </p>
+            {% endif %}
+    </div>
+{% endblock %}

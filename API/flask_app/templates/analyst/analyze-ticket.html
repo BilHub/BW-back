@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Analyse du Ticket</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.action.label }}<br>
+            {{ form.action }}<br>
+        </p>
+        <p>
+            {{ form.recommendation.label }}<br>
+            {{ form.recommendation(size=64) }}<br>
+            {% for error in form.recommendation.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.comment.label }}<br>
+            {{ form.comment(size=200, hight=10) }}<br>
+            {% for error in form.comment.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    <hr/>
+    <hr/>
+    <div>
+
+      <h2><b>Ticket : {{ ticket.id }}</b>  </h2>
+            <div>
+                <h3> Client : {{ ticket.groupe_name }}  </h3>
+                <p><b>Actif : </b> {{ ticket.asset_ref }}</p>
+                <p><b>Produit : </b> {{ ticket.cpe }}</p>
+            </div>
+        <hr/>
+            <div>
+                <h3> Vulnérabilité : {{ ticket.cve }}  </h3>
+                <p><b>Descriptif de la vulnérabilité : </b> {{ ticket.description }}</p>
+                <p><b>CVSS v2 : </b> {{ ticket.cvss2 }}</p>
+                <p><b>CVSS v3 : </b> {{ ticket.cvss3 }}</p>
+                <p><b>Criticité finale: </b> {{ ticket.score }}</p>
+                <p><b>Sources: </b> <a href="{{ ticket.links }}">lien</a> </p>
+            </div>
+        <hr/>
+            <div>
+                <p><b>Statut du ticket : </b> {{ ticket.status }}</p>
+                <p><b>Date de création : </b> {{ ticket.created_at }}</p>
+                <p><b>Date d'ouverture : </b> {{ ticket.opened_at }}</p>
+                <p><b>Recommendation : </b> {{ ticket.recommendation }}</p>
+                <p><b>Commentaire : </b> {{ ticket.comment }}</p>
+            </div>
+
+    </div>
+{% endblock %}

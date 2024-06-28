@@ -1,0 +1,4 @@
+Actif,Type,Vendor,Product,Version,Manager,Service,importance,responsible,Update,Edition,Langage
+BMD013,OS,Cisco,IOS XE Software,16.09.04,35,13,2,35,,,
+Clustern1,OS,Microsoft Corporation,Microsoft Windows Server 2016 Datacenter,10.0.14393,13,936,2,35,,,
+Clustern2,OS,tableau bi,tableau bi,*,13,936,2,35,,,

@@ -1,0 +1,7 @@
+actif,type,vendor,product,version,manager,responsable,service,importance
+BRL031,application,Microsoft Corporation,Microsoft Visual C++ 2022 X86 Additional Runtime,14.32.31326,client_demo,client_demo,base,3
+BRL031,application,Microsoft Corporation,Microsoft Visual C++ 2022 X64 Additional Runtime,14.36.32532,client_demo,client_demo,base,3
+BRL031,application,Microsoft Corporation,Microsoft Update Health Tools,3.74.0.0,client_demo,client_demo,base,3
+BRL031,application,VMware,VMware Tools,12.1.0.20219665,client_demo,client_demo,base,3
+BRL031,application,Microsoft Corporation,Microsoft Visual C++ 2022 X64 Minimum Runtime,14.36.32532,client_demo,client_demo,base,3
+BRL031,application,Microsoft Corporation,Microsoft Visual C++ 2022 X86 Minimum Runtime,14.32.31326,client_demo,client_demo,base,3

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Recherche</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.asset.label }}<br>
+            {{ form.asset }}<br>
+        </p>
+        <p>
+            {{ form.manager.label }}<br>
+            {{ form.manager }}<br>
+        </p>
+        <p>
+            {{ form.service.label }}<br>
+            {{ form.service }}<br>
+        </p>
+        <p>
+            {{ form.status.label }}
+            {{ form.status }}
+        </p>
+        <p>
+            {{ form.sort.label }}
+            {{ form.sort }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+
+    {% if assets %}
+    <h1>Actifs trouvés :</h1>
+    {% for asset in assets %}
+    <div>
+        <p><b>{{ asset.asset_ref }}</b>  </p>
+        <p>Manager : {{ asset.manager }}</p>
+        <p>Service : {{ asset.service }}</p>
+        <p>Importance : {{ asset.importance }}</p>
+        <p>Monitoring : {{ status[asset.status] }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+{% endblock %}

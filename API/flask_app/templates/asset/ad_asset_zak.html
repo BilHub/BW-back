@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <a href="{{ url_for('search_assets') }}">Recherche par filtre</a> </br>
+        <a href="{{ url_for('add_asset') }}">Ajouter Actif</a> </br>
+        <a href="{{ url_for('import_assets') }}">Importer un ensemble d'actif</a> </br>
+        <a href="{{ url_for('modify_asset') }}">Modifier Actif</a> </br>
+        <a href="{{ url_for('status_asset') }}">Activer/Désactiver Actif</a> </br>
+        <a href="{{ url_for('del_asset') }}">Supprimer Actif</a>
+    </div>
+    <h1> Actifs :</h1>
+
+    {% for asset in assets %}
+    <div>
+      <p><b>{{ asset.asset_ref }}</b> : </p>
+            <p>Manager : {{ asset.manager }}</p>
+            <p>Service : {{ asset.service }}</p>
+            <p>Importance : {{ asset.importance }}</p>
+            <p>Monitoring : {{ status[asset.status] }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

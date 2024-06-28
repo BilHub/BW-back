@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pytest = "*"
+pytest-flask = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-login = "*"
+flask-jwt-extended = "*"
+flask-cors = "*"
+mysqlclient = "*"
+pandas = "*"
+flask-restx = "*"
+mysql-connector = "*"
+flask-wtf = "*"
+wtforms = "==2.3.3"
+authy = "*"
+jira = "*"
+email-validator = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

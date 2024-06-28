@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <a href="{{ url_for('register') }}">Ajouter un utilisateur</a> <br/>
+        <a href="{{ url_for('del_user', client_name=client_name) }}">Supprimer un utilisateur</a>
+    </div>
+    <h1> Utilisateurs de {{ client_name }} :</h1>
+    <hr>
+    {% for user in users %}
+    <div>
+      <h2><b>{{ user.username }}</b> : </h2>
+            <p><b>Email :</b>  {{ user.email }}</p>
+            <p><b>Rôle :</b>  {{ roles[user.role] }}</p>
+            <p><b>Status :</b> {{ status[user.status] }}</p>
+            <p><b>Dernière connexion :</b> {{ user.last_conn }}</p>
+    </div>
+    <p> <a href="{{ url_for('modify_user', username=user.username) }}">Modifier</a> <p>
+    <hr/>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,422 @@
+{
+    "response": {
+        "version": "3.43",
+        "format": "json",
+        "status": "200",
+        "lang": "en",
+        "monoblock": "1",
+        "items": 10,
+        "consumption": 1,
+        "remaining": 38,
+        "querylimit": 10,
+        "querylimitmax": 40,
+        "timestamp": "1654087476",
+        "rtt": 2,
+        "etag": "70832eaaa5ca8bc5-3958c9037e20d0ae-dcca48101505dd86"
+    },
+    "request": {
+        "timestamp": "1654087474",
+        "apikey": "valid",
+        "userid": "27878",
+        "details": 0,
+        "sort": "entry_timestamp_create",
+        "fields": "entry_summary,software_cpe23,advisory_url",
+        "type": "recent",
+        "value": "10"
+    },
+    "result": [
+        {
+            "entry": {
+                "id": "200932",
+                "title": "gogs up to 0.12.7 server-side request forgery",
+                "summary": "A vulnerability was found in gogs up to 0.12.7. It has been declared as critical. This vulnerability affects an unknown code. Upgrading to version 0.12.8 eliminates this vulnerability. Applying the patch 7885f454a4946c4bbec1b4f8c603b5eea7429c7f is able to eliminate this problem. The bugfix is ready for download at github.com. The best possible mitigation is suggested to be upgrading to the latest version.",
+                "timestamp": {
+                    "create": "1654081902",
+                    "change": "1654081902"
+                }
+            },
+            "software": {
+                "cpe23": [
+                    "cpe:2.3:a:gogs:gogs:0.12.0:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:gogs:gogs:0.12.1:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:gogs:gogs:0.12.2:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:gogs:gogs:0.12.3:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:gogs:gogs:0.12.4:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:gogs:gogs:0.12.5:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:gogs:gogs:0.12.6:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:gogs:gogs:0.12.7:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.5.89:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.5.55:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.5.56:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.3.56:*:*:*:*:*:*:*",
+                     "cpe:2.3:a:comments_plugin:comments_plugin:1.4.56:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.5.91:*:*:*:*:*:*:*",
+                     "cpe:2.3:a:comments_plugin:comments_plugin:1.5.93:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.5.95:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.5.97:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.5.99:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.4.83:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.4.85:*:*:*:*:*:*:*",
+                     "cpe:2.3:a:comments_plugin:comments_plugin:1.6.85:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.86:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.87:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.88:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.89:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.91:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.92:*:*:*:*:*:*:*",
+                     "cpe:2.3:a:comments_plugin:comments_plugin:1.6.93:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.94:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.95:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.96:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.97:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.98:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.6.99:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.7.01:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.7.02:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.7.03:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.7.04:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.7.05:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.7.06:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.8.06:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.9.06:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.10.06:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:1.11.06:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:3.15.06:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:comments_plugin:comments_plugin:3.17.06:*:*:*:*:*:*:*"
+                ]
+            },
+            "vulnerability": {
+                "risk": {
+                    "value": "2",
+                    "name": "medium"
+                }
+            },
+            "advisory": {
+                "date": "1654034400",
+                "url": "https:\/\/huntr.dev\/bounties\/da1fbd6e-7a02-458e-9c2e-6d226c47046d"
+            },
+            "source": {
+                "cve": {
+                    "id": "CVE-2025-235870"
+                }
+            }
+        },
+        {
+            "entry": {
+                "id": "200931",
+                "title": "HCL Traveler Approved Application Name cross site scripting",
+                "summary": "A vulnerability was found in HCL Traveler (the affected version unknown). It has been classified as problematic. This affects an unknown part of the component Approved Application Handler. There is no information about possible countermeasures known. It may be suggested to replace the affected object with an alternative product.",
+                "timestamp": {
+                    "create": "1654064326",
+                    "change": "1654064326"
+                }
+            },
+            "software": {
+                "cpe23": [
+                    "cpe:2.3:a:hcl:traveler:*:*:*:*:*:*:*:*"
+                ]
+            },
+            "vulnerability": {
+                "risk": {
+                    "value": "1",
+                    "name": "low"
+                }
+            },
+            "advisory": {
+                "date": "1654034400",
+                "url": "https:\/\/support.hcltechsw.com\/csm?id=kb_article&sysparm_article=KB0098044"
+            },
+            "source": {
+                "cve": {
+                    "id": "CVE-2021-27778"
+                }
+            }
+        },
+        {
+            "entry": {
+                "id": "200930",
+                "title": "XWiki Platform up to 12.10.10\/13.4.6\/13.10.2 Filter UI cross site scripting",
+                "summary": "A vulnerability was found in XWiki Platform up to 12.10.10\/13.4.6\/13.10.2 (Content Management System) and classified as problematic. Affected by this issue is some unknown functionality of the component Filter UI. Upgrading to version 12.10.11, 13.4.7, 13.10.3 or 14.0-rc1 eliminates this vulnerability. Applying the patch 21906acb5ee2304552f56f9bbdbf8e7d368f7f3a is able to eliminate this problem. The bugfix is ready for download at github.com. The best possible mitigation is suggested to be upgrading to the latest version.",
+                "timestamp": {
+                    "create": "1654064263",
+                    "change": "1654064263"
+                }
+            },
+            "software": {
+                "cpe23": [
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:12.10.0:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:12.10.1:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:12.10.2:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:12.10.3:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:12.10.4:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:12.10.5:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:12.10.6:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:12.10.7:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:12.10.8:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:12.10.9:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:12.10.10:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:13.4.0:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:13.4.1:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:13.4.2:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:13.4.3:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:13.4.4:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:13.4.5:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:13.4.6:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:13.10.0:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:13.10.1:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:xwiki_platform:xwiki_platform:13.10.2:*:*:*:*:*:*:*"
+                ]
+            },
+            "vulnerability": {
+                "risk": {
+                    "value": "1",
+                    "name": "low"
+                }
+            },
+            "advisory": {
+                "date": "1654034400",
+                "url": "https:\/\/github.com\/xwiki\/xwiki-platform\/security\/advisories\/GHSA-xjfw-5vv5-vjq2"
+            },
+            "source": {
+                "cve": {
+                    "id": "CVE-2022-29258"
+                }
+            }
+        },
+        {
+            "entry": {
+                "id": "200929",
+                "title": "Nextcloud Server up to 22.2.6\/23.0.3 Session Name resource consumption",
+                "summary": "A vulnerability has been found in Nextcloud Server up to 22.2.6\/23.0.3 (Cloud Software) and classified as problematic. Affected by this vulnerability is an unknown functionality of the component Session Name Handler. Upgrading to version 22.2.7 or 23.0.4 eliminates this vulnerability. Applying a patch is able to eliminate this problem. The bugfix is ready for download at github.com. The best possible mitigation is suggested to be upgrading to the latest version.",
+                "timestamp": {
+                    "create": "1654064196",
+                    "change": "1654064196"
+                }
+            },
+            "software": {
+                "cpe23": [
+                    "cpe:2.3:a:nextcloud:server:22.2.0:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:nextcloud:server:22.2.1:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:nextcloud:server:22.2.2:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:nextcloud:server:22.2.3:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:nextcloud:server:22.2.4:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:nextcloud:server:22.2.5:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:nextcloud:server:22.2.6:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:nextcloud:server:23.0:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:nextcloud:server:23.0.1:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:nextcloud:server:23.0.2:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:nextcloud:server:23.0.3:*:*:*:*:*:*:*"
+                ]
+            },
+            "vulnerability": {
+                "risk": {
+                    "value": "1",
+                    "name": "low"
+                }
+            },
+            "advisory": {
+                "date": "1654034400",
+                "url": "https:\/\/github.com\/nextcloud\/security-advisories\/security\/advisories\/GHSA-7cwm-qph5-4h5w"
+            },
+            "source": {
+                "cve": {
+                    "id": "CVE-2022-29243"
+                }
+            }
+        },
+        {
+            "entry": {
+                "id": "200928",
+                "title": "polonel trudesk up to 1.2.2 information disclosure",
+                "summary": "A vulnerability, which was classified as problematic, was found in polonel trudesk up to 1.2.2. Affected is an unknown function. Upgrading to version 1.2.3 eliminates this vulnerability. Applying the patch ae904d37eaa38bffebfbfe8e949c0385c63e3263 is able to eliminate this problem. The bugfix is ready for download at github.com. The best possible mitigation is suggested to be upgrading to the latest version.",
+                "timestamp": {
+                    "create": "1654064156",
+                    "change": "1654064156"
+                }
+            },
+            "software": {
+                "cpe23": [
+                    "cpe:2.3:a:polonel:trudesk:1.2.0:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:polonel:trudesk:1.2.1:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:polonel:trudesk:1.2.2:*:*:*:*:*:*:*"
+                ]
+            },
+            "vulnerability": {
+                "risk": {
+                    "value": "1",
+                    "name": "low"
+                }
+            },
+            "advisory": {
+                "date": "1654034400",
+                "url": "https:\/\/huntr.dev\/bounties\/a1cfe61b-5248-4a73-9a80-0b764edc9b26"
+            },
+            "source": {
+                "cve": {
+                    "id": "CVE-2022-1893"
+                }
+            }
+        },
+        {
+            "entry": {
+                "id": "200927",
+                "title": "polonel trudesk up to 1.2.2 unnecessary privileges",
+                "summary": "A vulnerability, which was classified as critical, has been found in polonel trudesk up to 1.2.2. This issue affects some unknown processing. Upgrading to version 1.2.3 eliminates this vulnerability. Applying the patch f739eac6fc52adc0cba83a49034100e5b99ac7c8 is able to eliminate this problem. The bugfix is ready for download at github.com. The best possible mitigation is suggested to be upgrading to the latest version.",
+                "timestamp": {
+                    "create": "1654064062",
+                    "change": "1654064062"
+                }
+            },
+            "software": {
+                "cpe23": [
+                    "cpe:2.3:a:polonel:trudesk:1.2.0:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:polonel:trudesk:1.2.1:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:polonel:trudesk:1.2.2:*:*:*:*:*:*:*"
+                ]
+            },
+            "vulnerability": {
+                "risk": {
+                    "name": "medium"
+                }
+            },
+            "advisory": {
+                "date": "1654034400",
+                "url": "https:\/\/huntr.dev\/bounties\/9-polonel\/trudesk"
+            },
+            "source": {
+                "cve": {
+                    "id": "CVE-2022-1808"
+                }
+            }
+        },
+        {
+            "entry": {
+                "id": "200926",
+                "title": "eLabFTW up to 4.2.x permission",
+                "summary": "A vulnerability classified as critical was found in eLabFTW up to 4.2.x. This vulnerability affects an unknown code block. Upgrading to version 4.3.0 eliminates this vulnerability. The upgrade is hosted for download at github.com.",
+                "timestamp": {
+                    "create": "1654064003",
+                    "change": "1654064003"
+                }
+            },
+            "software": {
+                "cpe23": [
+                    "cpe:2.3:a:elabftw:elabftw:4.0:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:elabftw:elabftw:4.1:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:elabftw:elabftw:4.2:*:*:*:*:*:*:*"
+                ]
+            },
+            "vulnerability": {
+                "risk": {
+                    "value": "2",
+                    "name": "medium"
+                }
+            },
+            "advisory": {
+                "date": "1654034400",
+                "url": "https:\/\/github.com\/elabftw\/elabftw\/security\/advisories\/GHSA-937c-m7p3-775v"
+            },
+            "source": {
+                "cve": {
+                    "id": "CVE-2022-31007"
+                }
+            }
+        },
+        {
+            "entry": {
+                "id": "200925",
+                "title": "Vapor up to 4.60.2 FileMiddleware integer overflow",
+                "summary": "A vulnerability classified as critical has been found in Vapor up to 4.60.2. This affects an unknown code of the component FileMiddleware. Upgrading to version 4.60.3 eliminates this vulnerability. The upgrade is hosted for download at github.com. Applying the patch 953a349b539b3e0d3653585c8ffb50c427986df1 is able to eliminate this problem. The bugfix is ready for download at github.com. The best possible mitigation is suggested to be upgrading to the latest version.",
+                "timestamp": {
+                    "create": "1654063955",
+                    "change": "1654063955"
+                }
+            },
+            "software": {
+                "cpe23": [
+                    "cpe:2.3:a:vapor:vapor:4.60.0:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:vapor:vapor:4.60.1:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:vapor:vapor:4.60.2:*:*:*:*:*:*:*"
+                ]
+            },
+            "vulnerability": {
+                "risk": {
+                    "value": "2",
+                    "name": "medium"
+                }
+            },
+            "advisory": {
+                "date": "1654034400",
+                "url": "https:\/\/github.com\/vapor\/vapor\/security\/advisories\/GHSA-vj2m-9f5j-mpr5"
+            },
+            "source": {
+                "cve": {
+                    "id": "CVE-2022-31005"
+                }
+            }
+        },
+        {
+            "entry": {
+                "id": "200924",
+                "title": "CureKit up to 1.1.3 isFileOutsideDir path traversal",
+                "summary": "A vulnerability was found in CureKit up to 1.1.3. It has been rated as critical. Affected by this issue is the function isFileOutsideDir. Applying the patch af35e870ed09411d2f1fae6db1b04598cd1a31b6 is able to eliminate this problem. The bugfix is ready for download at github.com.",
+                "timestamp": {
+                    "create": "1654063926",
+                    "change": "1654063926"
+                }
+            },
+            "software": {
+                "cpe23": [
+                    "cpe:2.3:a:SourceCodester:product_show_room_site:1.0:*:*:*:*:*:*:*"
+                ]
+            },
+            "vulnerability": {
+                "risk": {
+                    "value": "2",
+                    "name": "medium"
+                }
+            },
+            "advisory": {
+                "date": "1654034400",
+                "url": "https:\/\/www.mend.io\/vulnerability-database\/CVE-2022-23082"
+            },
+            "source": {
+                "cve": {
+                    "id": "CVE-2022-23331"
+                }
+            }
+        },
+        {
+            "entry": {
+                "id": "200923",
+                "title": "vim up to 8.1 heap-based overflow",
+                "summary": "A vulnerability was found in vim up to 8.1 (Word Processing Software). It has been declared as critical. Affected by this vulnerability is some unknown functionality. Upgrading to version 8.2 eliminates this vulnerability. Applying the patch 71223e2db87c2bf3b09aecb46266b56cda26191d is able to eliminate this problem. The bugfix is ready for download at github.com. The best possible mitigation is suggested to be upgrading to the latest version.",
+                "timestamp": {
+                    "create": "1654063840",
+                    "change": "1654063840"
+                }
+            },
+            "software": {
+                "cpe23": [
+                    "cpe:2.3:a:vim:vim:8.0:*:*:*:*:*:*:*",
+                    "cpe:2.3:a:vim:vim:8.1:*:*:*:*:*:*:*"
+                ]
+            },
+            "vulnerability": {
+                "risk": {
+                    "value": "2",
+                    "name": "medium"
+                }
+            },
+            "advisory": {
+                "date": "1654034400",
+                "url": "https:\/\/huntr.dev\/bounties\/67ca4d3b-9175-43c1-925c-72a7091bc071"
+            },
+            "source": {
+                "cve": {
+                    "id": "CVE-2022-1942"
+                }
+            }
+        }
+    ]
+}

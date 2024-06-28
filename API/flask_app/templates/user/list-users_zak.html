@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+    </div>
+    <h1> Colaborateurs :</h1>
+
+    {% for user in users %}
+    <div>
+        <hr/>
+      <h2>{{ user.username }} : </h2>
+            <p><b>Status :</b> {{ status[user.status] }}</p>
+            <p><b>Services gérés :</b> {% for service in user.services %} {{ service }} {% endfor %}</p>
+            <p><b> d'actifs gérés :</b> {{ user.nb_assets }}</p>
+            <p><b>Nombre de tickets actifs :</b> {{ user.nb_tickets }}</p>
+            <p><b>Dernière connexion :</b> {{ user.last_conn }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

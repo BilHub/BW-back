@@ -1,0 +1,56 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - PGV</title>
+      {% else %}
+      <title>Welcome to PGV</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>
+            PGV:
+            <a href="{{ url_for('index') }}">Home</a> <!-- url_for() return the link to the web page -->
+            {% if current_user.is_anonymous %} <!-- the user has been not loged yet -->
+                <a href="{{ url_for('login') }}">Login</a>
+            {% else %}
+                {% if current_user.role == 'cert_user' %} <!-- the loged user is an analyst-->
+                    <a href="{{ url_for('register') }}">Utilisateurs</a>
+                    <a href="{{ url_for('list_clients') }}">Clients</a>
+                    <a href="{{ url_for('list_plans') }}">Abonnements</a>
+                    <a href="{{ url_for('analyst_tickets') }}">Tickets</a>
+                {% elif current_user.role == 'cert_ad' %}
+                        <a href="{{ url_for('register') }}">Utilisateurs</a>
+                        <a href="{{ url_for('list_clients') }}">Clients</a>
+                        <a href="{{ url_for('list_plans') }}">Abonnements</a>
+                        <a href="{{ url_for('list_analysts') }}">Analystes</a>
+
+                {% else %}
+                    {% if current_user.role == 'ad_user' %} <!-- the loged user is a client-->
+                        <a href="{{ url_for('ad_assets') }}">Actifs</a>
+                        <a href="{{ url_for('list_services') }}">Services</a>
+                        <a href="{{ url_for('list_users') }}">Utilisateurs</a>
+                        <a href="{{ url_for('ad_tickets') }}">Tickets</a>
+                        <a href="{{ url_for('subscription') }}">Abonnement</a>
+                    {% else %}
+                        <a href="{{ url_for('assets') }}">Actifs</a>
+                        <a href="{{ url_for('tickets') }}">Tickets</a>
+                    {% endif %}
+                    <a href="{{ url_for('user') }}">Profil</a>
+                {% endif %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %} <!-- returns a list of all the messages that have been registered with flash() previously-->
+        {% if messages %} <!-- messages appear only once after the flash() function is called -->
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

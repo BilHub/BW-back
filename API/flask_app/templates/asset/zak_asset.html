@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <a href="{{ url_for('add_product') }}">Ajouter Produit</a> </br>
+        <a href="{{ url_for('del_product') }}">Supprimer Produit</a>
+    </div>
+    <h1> Actifs :</h1>
+    {% for asset in assets %}
+
+    <div>
+      <p><b>{{ asset.asset_ref }}</b>  </p>
+          {% for cpe in asset.cpes %}
+             <p> {{ cpe }} </p>
+          {% endfor %}
+    </div>
+    {% endfor %}
+{% endblock %}

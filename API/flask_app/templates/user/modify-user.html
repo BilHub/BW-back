@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Modification Utilisateur</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.role.label }}<br>
+            {{ form.role }}<br>
+            {% for error in form.role.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.status.label }}<br>
+            {{ form.status }}<br>
+        </p>
+        <p>
+            {{ form.country_code.label }}<br>
+            {{ form.country_code }}<br>
+            {% for error in form.country_code.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.phone_number.label }}<br>
+            {{ form.phone_number }}<br>
+            {% for error in form.phone_number.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    <hr>
+     <div>
+      <h2><b>{{ user.username }}</b> : </h2>
+            <p><b>Entreprise :</b>  {{ client_name }}</p>
+            <p><b>Email :</b>  {{ user.email }}</p>
+            <p><b>Rôle :</b>  {{ roles[user.role] }}</p>
+            <p><b>Status :</b> {{ status[user.status] }}</p>
+            <p><b>Dernière connexion :</b> {{ user.last_conn }}</p>
+            <p><b>Numéro de téléphone :</b> +{{user.country_code}} {{user.phone }}</p>
+    </div>
+{% endblock %}

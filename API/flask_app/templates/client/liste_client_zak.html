@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <a href="{{ url_for('add_company') }}">Ajouter nouveau client</a> </br>
+        <a href="{{ url_for('del_company') }}">Supprimer client</a></br>
+        <a href="{{ url_for('add_subscription') }}">Ajouter une nouvelle souscription</a>
+    </div>
+    <h1>Liste des clients :</h1>
+    {% for client in clients %}
+    <div>
+      <h2><b>Entreprise : {{ client.groupe_name }}</b>  </h2>
+            <p><b>Nombre d'utilisateur : </b> {{ client.nb_users }}/{{ client.user_credits }}</p>
+            <p><b>Nombre d'actifs : </b> {{ client.nb_assets }}</p>
+            <p><b>Nombre de produits : </b> {{ client.nb_products }}/{{ client.cpe_credits }}</p>
+            <div>
+            {% if client.subscription != '' %}
+                <p><b>Abonnement : </b> {{ client.subscription }} </p>
+                <p><b>Etat : </b> {{ status[client.subs_status] }} </p>
+                <a href="{{ url_for('modify_subscription', subs_id=client.subs_id) }}">Changer</a>   <a href="{{ url_for('extend_subscription', subs_id=client.subs_id) }}">Prolonger</a>
+                {% if client.subs_status == 1 %}
+                    <a href="{{ url_for('disable_subscription', subs_id=client.subs_id) }}">Désactiver/Annuler</a>
+                {% endif %}
+                <p><b>Date de souscription : </b> {{ client.start_at }} </p>
+                <p><b>Date d'expiration : </b> {{ client.expire_on }} </p>
+            {% else %}
+                <p><b>Abonnement : </b> <a href="{{ url_for('add_subscription') }}">S'abonner</a> </p>
+            {% endif %}
+                <p> <a href="{{ url_for('list_client_users', client_name=client.groupe_name) }}">Liste utilisateurs</a> <p>
+            </div>
+
+            <a href="{{ url_for('modify_company', client_name=client.groupe_name) }}">Modifier</a> les informations du client
+    </div>
+    <hr/>
+    {% endfor %}
+{% endblock %}

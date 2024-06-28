@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ user.username }}!</h1>
+    <h1>Vulnérabilités :</h1>
+    {% for cve in cves %}
+    <div>
+      <p><b>{{ cve.id }}</b> : {{ cve.title }}</p>
+      <p> Description : {{ cve.description }}</p>
+      <p> Lien : <a href={{ cve.links }}> {{ cve.links }} </a> </p>
+      <p> Publiée le : {{ cve.published_at }}</p>
+      <p> Dernière modification : {{ cve.last_modified }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

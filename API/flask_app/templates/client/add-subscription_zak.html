@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <a href="{{ url_for('add_plan') }}">Ajouter une nouvel abonnement</a>
+    </div>
+    <h1>Nouvelle souscription</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.client.label }}<br>
+            {{ form.client }}<br>
+        </p>
+        <p>
+            {{ form.plan.label }}<br>
+            {{ form.plan }}<br>
+        </p>
+        <p>
+            {{ form.start_at.label }}<br>
+            {{ form.start_at }}<br>
+            {% for error in form.start_at.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.expire_on.label }}<br>
+            {{ form.expire_on }}<br>
+            {% for error in form.expire_on.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

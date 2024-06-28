@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+
+    </div>
+    <h1>Tickets non fermés :</h1>
+    {% for ticket in tickets %}
+    <div>
+      <h2><b>Ticket : {{ ticket.id }}</b>  </h2>
+            <p><b>Date de création : </b> {{ ticket.created_at }}</p>
+            <p><b>Date d'ouverture : </b> {{ ticket.opened_at }}</p>
+            <p><b>Actif : </b> {{ ticket.asset_ref }}</p>
+            <p><b>Produit : </b> {{ ticket.cpe }}</p>
+            <p><b>Client : </b> {{ ticket.groupe }}</p>
+            <p><b>Vulnérabilité : </b> {{ ticket.cve }}</p>
+            <p><b>Descriptif de la vulnérabilité : </b> {{ ticket.description }}</p>
+            <p><b>Criticité : </b> {{ ticket.score }}</p>
+            <p><b>Statut : </b> {{ ticket.status }}</p>
+            <a href="{{ url_for('analyze_ticket', preticket_id=ticket.id) }}">Analyser</a>
+    </div>
+    {% endfor %}
+{% endblock %

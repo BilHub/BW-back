@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Modification Client</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name }}<br>
+            {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.type.label }}<br>
+            {{ form.type }}<br>
+        </p>
+        <p>
+            {{ form.alerts.label }}<br>
+            {{ form.alerts }}<br>
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+     <div>
+            <h2><b>{{ client.name }}</b>  </h2>
+            <p><b>Description :</b> {{ client.type }}</p>
+            <p><b>Alerter par mail :</b> {{ alerted[client.alerts] }}</p>
+            {% if client.subscription != '' %}
+                <p><b>Abonnement : </b> {{ client.subscription }} </p>
+                <p><b>Crédits utilisateurs :</b> {{ client.nb_users }}/{{ client.user_credits }} </p>
+                <p><b>Crédits produits :</b> {{ client.nb_products }}/{{ client.cpe_credits }} </p>
+                <p><b>Date de souscription :</b> {{ client.start_at }}  </p>
+                <p><b>Date d'expiration' :</b> {{ client.expire_on }} </p>
+            {% else %}
+                <p><b>Abonnement : </b> <a href="{{ url_for('add_subscription') }}">S'abonner</a> </p>
+            {% endif %}
+     </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <a href="{{ url_for('add_analyst') }}">Ajouter nouveau analyst</a> </br>
+    </div>
+    <h1> Analystes :</h1>
+
+    {% for analyst in analysts %}
+    <div>
+        <hr/>
+      <h2>{{ analyst.username }} : </h2>
+            <p><b>Status :</b> {{ status[analyst.status] }}</p>
+            <p><b>Email :</b> {{ analyst.email }}</p>
+            <p><b>Nombre de tickets actifs :</b> {{ analyst.nb_tickets }}</p>
+            <p><b>Dernière connexion :</b> {{ analyst.last_conn }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

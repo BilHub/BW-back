@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1> Services</h1>
+    <div>
+        <a href="{{ url_for('add_service') }}">Ajouter Service</a> </br>
+        <a href="{{ url_for('modify_service') }}">Modifier Service</a> </br>
+        <a href="{{ url_for('del_service') }}">Supprimer Service</a>
+    </div>
+    {% for service in services %}
+    <div>
+      <p><b>{{ service.name }}</b> : </p>
+            <p>Manager : {{ service.manager }}</p>
+            <p>Nombre d'actif : {{ service.count_assets }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

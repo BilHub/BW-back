@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <a href="{{ url_for('search_tickets') }}">Recherche par filtre</a> </br>
+    </div>
+    <h1>Vos tickets :</h1>
+    {% for ticket in tickets %}
+    <div>
+      <h2><b>Ticket : {{ ticket.id }}</b>  </h2>
+            <p><b>Date de création : </b> {{ ticket.created_at }}</p>
+            <p><b>Date d'ouverture : </b> {{ ticket.opened_at }}</p>
+            <p><b>Actif : </b> {{ ticket.asset_ref }}</p>
+            <p><b>Produit : </b> {{ ticket.cpe }}</p>
+            <p><b>Vulnérabilité : </b> {{ ticket.cve }}</p>
+            <p><b>Descriptif de la vulnérabilité : </b> {{ ticket.description }}</p>
+            <p><b>Criticité : </b> {{ ticket.score }}</p>
+            <p><b>Statut : </b> {{ ticket.status }}</p>
+            <a href="{{ url_for('modify_ticket', ticket_id=ticket.id) }}">Modifier</a>
+    </div>
+    {% endfor %}
+{% endblock %}

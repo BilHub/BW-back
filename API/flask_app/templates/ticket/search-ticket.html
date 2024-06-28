@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Recherche</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.cve.label }}<br>
+            {{ form.cve }}<br>
+        </p>
+        <p>
+            {{ form.manager.label }}<br>
+            {{ form.manager }}<br>
+        </p>
+        <p>
+            {{ form.score.label }}<br>
+            {{ form.score }}<br>
+        </p>
+        <p>
+            {{ form.status.label }}
+            {{ form.status }}
+        </p>
+        <p>
+            {{ form.before_o_date.label }}
+            {{ form.before_o_date }}
+        </p>
+        <p>
+            {{ form.after_o_date.label }}
+            {{ form.after_o_date }}
+        </p>
+        <p>
+            {{ form.before_f_date.label }}
+            {{ form.before_f_date }}
+        </p>
+        <p>
+            {{ form.after_f_date.label }}
+            {{ form.after_f_date }}
+        </p>
+        <p>
+            {{ form.sort.label }}
+            {{ form.sort }}
+        </p>
+        <p>
+            {{ form.direction.label }}
+            {{ form.direction }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+
+    {% if tickets %}
+    <h1>Tickets trouvés :</h1>
+    {% for ticket in tickets %}
+    <div>
+      <h2><b>Ticket : {{ ticket.id }}</b>  </h2>
+            <p><b>Vulnérabilité : </b> {{ ticket.cve }}</p>
+            <p><b>Criticité : </b> {{ ticket.score }}</p>
+            <p><b>Responsable : </b> {{ ticket.manager }}</p>
+            <p><b>Statut : </b> {{ ticket.status }}</p>
+            <p><b>Date de création : </b> {{ ticket.created_at }}</p>
+            <p><b>Date d'ouverture : </b> {{ ticket.opened_at }}</p>
+            <p><b>Date de fermeture : </b> {{ ticket.closed_at}}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+{% endblock %}

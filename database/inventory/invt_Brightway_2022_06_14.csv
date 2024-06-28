@@ -1,0 +1,5 @@
+Actif,Type,Vendor,Product,Version,Update,Edition,Langage,sw_edition,target_sw,target_hw,other
+BMD008,OS,Cisco,IOS XE Software,16.09.04,,,,,,,
+,,,,,,,,,,,
+BMD008,OS,Cisco,,1.1.2.4,,,,,,,
+BMD008,OS,Cisco,WAP150-wap23ae40,1.1.2.4,,,,,,,
